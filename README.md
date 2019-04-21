@@ -139,8 +139,8 @@ cadena2
 ~~~
 &nbsp;
 ## 2. Las Tuplas
-
 &nbsp;
+
 Son unas colecciones parecidas a las listas, con la peculiaridad de que son inmutables.
 ~~~
 tupla = (100,"Hola",[1,2,3,4],-50)
