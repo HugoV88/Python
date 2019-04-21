@@ -1,5 +1,5 @@
 # Documentación Python
-
+----------------------
 ## 1. Fundamentos de Programación
 
 - Recorriendo los elementos de una lista utilizando While
@@ -23,8 +23,6 @@ while indice < len(numeros):
   10
 ~~~
 
----
-
 - Sentencia For (Para) con listas
 ~~~
 for numero in numeros:  # Para [variable] en [lista]
@@ -43,7 +41,7 @@ for numero in numeros:  # Para [variable] en [lista]
   10
 ~~~
 
-**Modificar ítems de la lista al vuelo**
+- Modificar ítems de la lista al vuelo
 
 Para asignar un nuevo valor a los elementos de una lista mientras la recorremos, podríamos intentar asignar al número el nuevo valor:
 
@@ -77,7 +75,7 @@ numeros
 ~~~
 > [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ~~~
-**For con cadenas**
+- For con cadenas
 ~~~
 cadena = "Hola amigos"
 for caracter in cadena:
