@@ -44,6 +44,7 @@ for numero in numeros:  # Para [variable] en [lista]
 ~~~
 
 **Modificar ítems de la lista al vuelo**
+
 Para asignar un nuevo valor a los elementos de una lista mientras la recorremos, podríamos intentar asignar al número el nuevo valor:
 
 ~~~
