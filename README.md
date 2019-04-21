@@ -12,16 +12,17 @@ while indice < len(numeros):
     indice+=1
 ~~~
 ~~~
-> 1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
-  10
+> 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
 ~~~
 &nbsp;
 ### Sentencia For (Para) con listas
@@ -30,16 +31,17 @@ for numero in numeros:  # Para [variable] en [lista]
     print(numero)
 ~~~
 ~~~
-> 1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
-  10
+> 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
 ~~~
 &nbsp;
 ### Modificar ítems de la lista al vuelo
@@ -50,7 +52,8 @@ for numero in numeros:
 numeros
 ~~~~
 ~~~~
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+> 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ~~~~
 Sin embargo, ésto no funciona. La forma correcta de hacerlo es haciendo referencia al índice de la lista en lugar de la variable:
 ~~~
@@ -62,7 +65,8 @@ for numero in numeros:
 numeros
 ~~~
 ~~~
-> [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+> 
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ~~~
 Podemos utilizar la función enumerate() para conseguir el índice y el valor en cada iteración fácilmente:
 ~~~
@@ -72,7 +76,8 @@ for indice,numero in enumerate(numeros):
 numeros
 ~~~
 ~~~
-> [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+> 
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ~~~
 &nbsp;
 ### For con cadenas
@@ -82,17 +87,18 @@ for caracter in cadena:
     print(caracter)
 ~~~
 ~~~
-> H
-  o
-  l
-  a
+> 
+H
+o
+l
+a
  
-  a
-  m
-  i 
-  g
-  o
-  s
+a
+m
+i 
+g
+o
+s
 ~~~
 Pero debemos recordar que las cadenas son inmutables:
 ~~~
@@ -117,11 +123,13 @@ for caracter in cadena:
 cadena
 ~~~
 ~~~
-> 'Hola amigos'
+> 
+'Hola amigos'
 ~~~
 ~~~
 cadena2
 ~~~
 ~~~
-> 'HHoollaa  aammiiggooss'
+> 
+'HHoollaa  aammiiggooss'
 ~~~
