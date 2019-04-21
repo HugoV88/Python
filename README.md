@@ -208,6 +208,7 @@ len(tupla[2])
 ~~~
 ### Métodos integrados
 **index()**
+
 Sirve para buscar un elemento y saber su posición en la tupla. Da error si no se encuentra.
 ~~~
 tupla = (100,"Hola",[1, 2, 3, 4],-50)
@@ -243,6 +244,7 @@ ValueError                                Traceback (most recent call last)
 ValueError: tuple.index(x): x not in tuple
 ~~~
 **count()**
+
 Sirve para contar cuantas veces aparece un elemento en una tupla.
 ~~~
 tupla = (100,"Hola",[1, 2, 3, 4],-50)
