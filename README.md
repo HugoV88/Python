@@ -1,5 +1,4 @@
 # Documentación Python
-----------------------
 ## 1. Fundamentos de Programación
 
 - Recorriendo los elementos de una lista utilizando While
