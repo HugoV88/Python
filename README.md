@@ -23,7 +23,7 @@ while indice < len(numeros):
   9
   10
 ~~~
-
+&nbsp;
 - Sentencia For (Para) con listas
 ~~~
 for numero in numeros:  # Para [variable] en [lista]
@@ -41,11 +41,9 @@ for numero in numeros:  # Para [variable] en [lista]
   9
   10
 ~~~
-
+&nbsp;
 - Modificar ítems de la lista al vuelo
-
 Para asignar un nuevo valor a los elementos de una lista mientras la recorremos, podríamos intentar asignar al número el nuevo valor:
-
 ~~~
 for numero in numeros:
     numero *= 10
@@ -76,6 +74,7 @@ numeros
 ~~~
 > [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ~~~
+&nbsp;
 - For con cadenas
 ~~~
 cadena = "Hola amigos"
