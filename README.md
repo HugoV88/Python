@@ -137,3 +137,146 @@ cadena2
 > 
 'HHoollaa  aammiiggooss'
 ~~~
+&nbsp;
+## 2. Las Tuplas
+Son unas colecciones parecidas a las listas, con la peculiaridad de que son inmutables.
+~~~
+tupla = (100,"Hola",[1,2,3,4],-50)
+tupla
+~~~
+~~~
+>
+(100, 'Hola', [1, 2, 3, 4], -50)
+~~~
+### Indexación y slicing
+~~~
+tupla = (100,"Hola",[1, 2, 3, 4],-50)
+tupla[0]
+~~~
+~~~
+>
+100
+~~~
+~~~
+tupla[-1]
+~~~
+~~~
+>
+-50
+~~~
+~~~
+tupla[2:]
+~~~
+~~~
+>
+([1, 2, 3, 4], -50)
+~~~
+~~~
+tupla[2][-1]
+~~~
+~~~
+>
+4
+~~~
+### Inmutabilidad
+~~~
+tupla[0] = 50
+~~~
+~~~
+>
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-9-b45433b4cee9> in <module>()
+----> 1 tupla[0] = 50
+
+TypeError: 'tuple' object does not support item assignment
+~~~
+### Función len()
+~~~
+len(tupla)
+~~~
+~~~
+>
+4
+~~~
+~~~
+len(tupla[2])
+~~~
+~~~
+>
+3
+~~~
+### Métodos integrados
+**index()**
+Sirve para buscar un elemento y saber su posición en la tupla. Da error si no se encuentra.
+~~~
+tupla = (100,"Hola",[1, 2, 3, 4],-50)
+tupla.index(100)
+~~~
+~~~
+>
+0
+~~~
+~~~
+tupla
+~~~
+~~~
+>
+(100, 'Hola', [1, 2, 3], -50)
+~~~
+~~~
+tupla.index('Hola')
+~~~
+~~~
+1
+~~~
+~~~
+tupla.index('Otro')
+~~~
+~~~
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-18-640d616163a2> in <module>()
+
+----> 1 tupla.index('Otro')
+
+ValueError: tuple.index(x): x not in tuple
+~~~
+**count()**
+Sirve para contar cuantas veces aparece un elemento en una tupla.
+~~~
+tupla = (100,"Hola",[1, 2, 3, 4],-50)
+tupla.count(100)
+~~~
+~~~
+>
+1
+~~~
+~~~
+tupla.count('Algo')
+~~~
+~~~
+>
+0
+~~~
+~~~
+tupla = (100,100,100,50,10)
+tupla.count(100)
+~~~
+~~~
+>
+3
+~~~
+**append() ?**
+Al ser inmutables, las tuplas no disponen de métodos para modificar su contenido.
+~~~
+tupla.append(10)
+~~~
+~~~
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-23-758d195ec9d7> in <module>()
+----> 1 tupla.append(10)
+
+AttributeError: 'tuple' object has no attribute 'append'
+~~~
