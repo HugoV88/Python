@@ -545,7 +545,7 @@ edades['Juan'] + edades['Maria']
 ~~~
 &nbsp;
 ### Lectura secuencial con for .. in ..
-Es posible utilizar una iteraciín for para recorrer los elementos del diccionario:
+Es posible utilizar una iteración for para recorrer los elementos del diccionario:
 ~~~
 for edad in edades:
     print(edad)
@@ -635,6 +635,7 @@ Son colecciones de elementos ordenados que únicamente permiten dos acciones:
 - Añadir un elemento a la pila
 - Sacar un elemento de la pila
 La peculiaridad es que el último elemento en entrar es el primero en salir. En inglés se conocen como estructuras LIFO (Last In First Out).
+
 **Las podemos crear como listas normales y añadir elementos al final con el append():**
 ~~~
 pila = [3,4,5]
@@ -647,6 +648,7 @@ pila
 [3, 4, 5, 6, 7]
 ~~~
 **Para sacar los elementos utilizaremos el método .pop():**
+
 Al utilizar pop() devolveremos el último elemento, pero también lo borraremos. Si queremos trabajar con él deberíamos asignarlo a una variable o lo perderemos:
 ~~~
 pila.pop()
@@ -694,6 +696,7 @@ pila
 []
 ~~~
 **Si hacemos pop() de una pila vacía, devolverá un error:**
+
 Debemos asegurarnos siempre de que la len() de la pila sea mayor que 0 antes de extraer un elemento automáticamente.
 ~~~
 pila.pop()
@@ -743,6 +746,7 @@ cola
 deque(['Hector', 'Juan', 'Miguel', 'Maria', 'Arnaldo'])
 ~~~
 **popleft() en lugar de pop()**
+
 A la hora de sacar los elementos utilizaremos el método popleft() para extraerlos por la parte izquierda (el principio de la cola). Al igual que antes, debemos asegurarnos de almacenar los elementos al sacarlos o los perderemos.
 ~~~
 cola.popleft()
