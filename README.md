@@ -1,7 +1,7 @@
 # Documentación Python 
 
 &nbsp;
-## 1. Detalles de bucle For
+# 1. Detalles de bucle For
 &nbsp;
 ### Recorriendo los elementos de una lista utilizando While
 ~~~
@@ -138,7 +138,7 @@ cadena2
 'HHoollaa  aammiiggooss'
 ~~~
 &nbsp;
-## 2. Las Tuplas
+# 2. Las Tuplas
 &nbsp;
 
 Son unas colecciones parecidas a las listas, con la peculiaridad de que son inmutables.
@@ -290,4 +290,149 @@ AttributeError                            Traceback (most recent call last)
 ----> 1 tupla.append(10)
 
 AttributeError: 'tuple' object has no attribute 'append'
+~~~
+&nbsp;
+# Los conjuntos
+&nbsp;
+Son colecciones desordenadas de elementos únicos utilizados para hacer pruebas de pertenencia a grupos y eliminación de elementos duplicados.
+~~~
+conjunto = set()
+conjunto
+~~~
+~~~
+>
+set()
+~~~
+~~~
+conjunto = {1,2,3}
+conjunto
+~~~
+~~~
+>
+{1, 2, 3}
+~~~
+&nbsp;
+###Método add()
+Sirve para añadir elementos al conjunto. Si un elemento ya se encuentra, no se añadirá de nuevo.
+~~~
+conjunto = {1,2,3}
+conjunto.add(4)
+conjunto
+~~~
+~~~
+>
+{1, 2, 3, 4}
+~~~
+~~~
+conjunto.add(0)
+conjunto
+~~~
+~~~
+>
+{0, 1, 2, 3, 4}
+~~~
+&nbsp;
+### Colecciones desordenadas
+Se dice que son desordenados porque gestionan automáticamente la posición de sus elementos, en lugar de conservarlos en la posición que nosotros los añadimos.
+~~~
+conjunto.add('H')
+conjunto
+~~~
+~~~
+>
+{0, 1, 2, 3, 4, 'H'}
+~~~
+~~~
+conjunto.add('A')
+conjunto.add('Z')
+conjunto
+~~~
+~~~
+>
+{0, 1, 2, 3, 4, 'A', 'Z', 'H'}
+~~~
+&nbsp;
+### Pertenencia a grupos con in
+~~~
+grupo = {'Hector','Juan','Mario'}
+'Hector' in grupo
+~~~
+~~~
+>
+True
+~~~
+~~~
+'Maria' in grupo
+~~~
+~~~
+>
+False
+~~~
+~~~
+'Hector' not in grupo
+~~~
+~~~
+>
+False
+~~~
+&nbsp;
+### Auto-eliminación de elementos duplicados
+~~~
+test = {'Hector','Hector','Hector'}
+test
+~~~
+~~~
+>
+{'Hector'}
+~~~
+&nbsp;
+### Cast de lista a conjunto y viceversa
+Es muy útil transformar listas a conjuntos para borrar los elementos duplicados automáticamente.
+~~~
+l = [1,2,3,3,2,1]
+l
+~~~
+~~~
+>
+[1, 2, 3, 3, 2, 1]
+~~~
+~~~
+c = set(l)
+c
+~~~
+~~~
+>
+{1, 2, 3}
+~~~
+~~~
+l = list(c)
+l
+~~~
+~~~
+>
+[1, 2, 3]
+~~~
+~~~
+l = [1,2,3,3,2,1]
+~~~
+&nbsp;
+### En una línea
+~~~
+l = list( set( l ) )
+l
+~~~
+~~~
+>
+[1, 2, 3]
+~~~
+&nbsp;
+### Cast de cadena a conjunto
+Sirve para crear un conjunto con todos los caracteres de la cadena.
+~~~
+s = "Al pan pan y al vino vino"
+set(s)
+~~~
+~~~
+>
+{' ', 'A', 'a', 'i', 'l', 'n', 'o', 'p', 'v', 'y'}
 ~~~
