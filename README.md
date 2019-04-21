@@ -100,7 +100,14 @@ for i,c in enumerate(cadena):
     cadena[i] = "*"
 ~~~
 ~~~
-> Error
+> 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-9-8ba888c46579> in <module>()
+      1 for i,c in enumerate(cadena):
+----> 2     cadena[i] = "*"
+
+TypeError: 'str' object does not support item assignment
 ~~~
 Sin embargo siempre podemos generar una nueva cadena:
 ~~~
