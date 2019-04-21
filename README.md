@@ -27,6 +27,7 @@ while indice < len(numeros):
 &nbsp;
 ### Sentencia For (Para) con listas
 ~~~
+numeros = [1,2,3,4,5,6,7,8,9,10]
 for numero in numeros:  # Para [variable] en [lista]
     print(numero)
 ~~~
@@ -47,6 +48,7 @@ for numero in numeros:  # Para [variable] en [lista]
 ### Modificar ítems de la lista al vuelo
 Para asignar un nuevo valor a los elementos de una lista mientras la recorremos, podríamos intentar asignar al número el nuevo valor:
 ~~~
+numeros = [1,2,3,4,5,6,7,8,9,10]
 for numero in numeros:
     numero *= 10
 numeros
@@ -102,6 +104,7 @@ s
 ~~~
 Pero debemos recordar que las cadenas son inmutables:
 ~~~
+cadena = "Hola amigos"
 for i,c in enumerate(cadena):
     cadena[i] = "*"
 ~~~
@@ -117,6 +120,7 @@ TypeError: 'str' object does not support item assignment
 ~~~
 Sin embargo siempre podemos generar una nueva cadena:
 ~~~
+cadena = "Hola amigos"
 cadena2 = ""
 for caracter in cadena:
     cadena2 += caracter * 2
