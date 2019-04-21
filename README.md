@@ -268,6 +268,7 @@ tupla.count(100)
 3
 ~~~
 **append() ?**
+
 Al ser inmutables, las tuplas no disponen de métodos para modificar su contenido.
 ~~~
 tupla.append(10)
