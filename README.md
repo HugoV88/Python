@@ -1,7 +1,7 @@
 # Documentación Python 
 
 &nbsp;
-## 1. Fundamentos de Programación
+## 1. Detalles de bucle For
 &nbsp;
 ### Recorriendo los elementos de una lista utilizando While
 ~~~
