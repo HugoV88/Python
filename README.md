@@ -627,7 +627,7 @@ Legolas Arquero Elfo
 Gimli Guerrero Enano
 ~~~
 &nbsp;
-# Las pilas y colas en listas
+# 5. Las pilas y colas en listas
 &nbsp;
 
 ### Las pilas
@@ -708,7 +708,7 @@ IndexError                                Traceback (most recent call last)
 IndexError: pop from empty list
 ~~~
 &nbsp;
-## Las colas
+### Las colas
 Son colecciones de elementos ordenados que únicamente permiten dos acciones:
 - Añadir un elemento a la cola
 - Sacar un elemento de la cola
