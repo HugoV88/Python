@@ -626,3 +626,150 @@ Gandalf Mago Humano
 Legolas Arquero Elfo
 Gimli Guerrero Enano
 ~~~
+&nbsp;
+# Las pilas y colas en listas
+&nbsp;
+
+### Las pilas
+Son colecciones de elementos ordenados que únicamente permiten dos acciones:
+- Añadir un elemento a la pila
+- Sacar un elemento de la pila
+La peculiaridad es que el último elemento en entrar es el primero en salir. En inglés se conocen como estructuras LIFO (Last In First Out).
+**Las podemos crear como listas normales y añadir elementos al final con el append():**
+~~~
+pila = [3,4,5]
+pila.append(6)
+pila.append(7)
+pila
+~~~
+~~~
+>
+[3, 4, 5, 6, 7]
+~~~
+**Para sacar los elementos utilizaremos el método .pop():**
+Al utilizar pop() devolveremos el último elemento, pero también lo borraremos. Si queremos trabajar con él deberíamos asignarlo a una variable o lo perderemos:
+~~~
+pila.pop()
+~~~
+~~~
+>
+7
+~~~
+~~~
+pila
+~~~
+~~~
+>
+[3, 4, 5, 6]
+~~~
+~~~
+n = pila.pop()
+n
+~~~
+~~~
+>
+6
+~~~
+~~~
+pila
+~~~
+~~~
+>
+[3, 4, 5]
+~~~
+~~~
+pila.pop()
+pila.pop()
+pila.pop()
+~~~
+~~~
+>
+3
+~~~
+~~~
+pila
+~~~
+~~~
+>
+[]
+~~~
+**Si hacemos pop() de una pila vacía, devolverá un error:**
+Debemos asegurarnos siempre de que la len() de la pila sea mayor que 0 antes de extraer un elemento automáticamente.
+~~~
+pila.pop()
+~~~
+~~~
+>
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-14-3900970cfbef> in <module>()
+----> 1 pila.pop()
+
+IndexError: pop from empty list
+~~~
+&nbsp;
+## Las colas
+Son colecciones de elementos ordenados que únicamente permiten dos acciones:
+- Añadir un elemento a la cola
+- Sacar un elemento de la cola
+La peculiaridad es que el primer elemento en entrar es el primero en salir. En inglés se conocen como estructuras FIFO (First In First Out).
+
+**Debemos importar la colección deque manualmente para crear una cola:**
+~~~
+from collections import deque
+cola = deque()
+cola
+~~~
+~~~
+>
+deque([])
+~~~
+**Podemos añadir elemento directamente pasando una lista a la cola al crearla:**
+~~~
+cola = deque(['Hector','Juan','Miguel'])
+cola
+~~~
+~~~
+>
+deque(['Hector', 'Juan', 'Miguel'])
+~~~
+**Y también utilizando el método .append():**
+~~~
+cola.append('Maria')
+cola.append('Arnaldo')
+cola
+~~~
+~~~
+deque(['Hector', 'Juan', 'Miguel', 'Maria', 'Arnaldo'])
+~~~
+**popleft() en lugar de pop()**
+A la hora de sacar los elementos utilizaremos el método popleft() para extraerlos por la parte izquierda (el principio de la cola). Al igual que antes, debemos asegurarnos de almacenar los elementos al sacarlos o los perderemos.
+~~~
+cola.popleft()
+~~~
+~~~
+>
+'Hector'
+~~~
+~~~
+cola
+~~~
+~~~
+>
+deque(['Juan', 'Miguel', 'Maria', 'Arnaldo'])
+~~~
+~~~
+p = cola.popleft()
+p
+~~~
+~~~
+>
+'Juan'
+~~~
+~~~
+cola
+~~~
+~~~
+>
+deque(['Miguel', 'Maria', 'Arnaldo'])
+~~~
