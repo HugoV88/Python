@@ -2,6 +2,7 @@
 
 &nbsp;
 ## 1. Fundamentos de Programación
+&nbsp;
 - Recorriendo los elementos de una lista utilizando While
 ~~~
 numeros = [1,2,3,4,5,6,7,8,9,10]
