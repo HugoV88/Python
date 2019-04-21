@@ -292,8 +292,9 @@ AttributeError                            Traceback (most recent call last)
 AttributeError: 'tuple' object has no attribute 'append'
 ~~~
 &nbsp;
-# Los conjuntos
+# 3. Los conjuntos
 &nbsp;
+
 Son colecciones desordenadas de elementos únicos utilizados para hacer pruebas de pertenencia a grupos y eliminación de elementos duplicados.
 ~~~
 conjunto = set()
@@ -435,4 +436,193 @@ set(s)
 ~~~
 >
 {' ', 'A', 'a', 'i', 'l', 'n', 'o', 'p', 'v', 'y'}
+~~~
+&nbsp;
+# 4. Los diccionarios
+&nbsp;
+
+Son junto a las listas las colecciones más utilizadas. Se basan en una estructura mapeada donde cada elemento de la colección se encuentra identificado con una clave única. Por tanto, no puede haber dos claves iguales. En otros lenguajes se conocen como arreglos asociativos.
+~~~
+vacio = {}
+vacio
+~~~
+~~~
+>
+{}
+~~~
+&nbsp;
+### Tipo de una variable
+~~~
+type(vacio)
+~~~
+~~~
+>
+dict
+~~~
+&nbsp;
+### Definición
+Para cada elemento se define la estructura -> clave:valor
+~~~
+colores = {'amarillo':'yellow','azul':'blue'}
+~~~
+También se pueden añadir elementos sobre la marcha
+~~~
+colores['verde'] = 'green'
+colores
+~~~
+~~~
+>
+{'amarillo': 'yellow', 'azul': 'blue', 'verde': 'green'}
+~~~
+~~~
+colores['azul']
+~~~
+~~~
+>
+'blue'
+~~~
+~~~
+colores['amarillo']
+~~~
+~~~
+>
+'yellow'
+~~~
+Las claves también pueden ser números, pero son un poco confusas
+~~~
+numeros = {10:'diez',20:'veinte'}
+numeros[10]
+~~~
+~~~
+>
+'diez'
+~~~
+&nbsp;
+### Modificación de valor a partir de la clave
+~~~
+colores['amarillo'] = 'white'
+colores
+~~~
+~~~
+>
+{'amarillo': 'white', 'azul': 'blue', 'verde': 'green'}
+~~~
+&nbsp;
+### Función del()
+Sirve para borrar un elemento del diccionario.
+~~~
+del(colores['amarillo'])
+colores
+~~~
+~~~
+>
+{'azul': 'blue', 'verde': 'green'}
+~~~
+&nbsp;
+### Trabajando directamente con registros
+~~~
+edades = {'Hector':27,'Juan':45,'Maria':34}
+edades
+~~~
+~~~
+>
+{'Hector': 27, 'Juan': 45, 'Maria': 34}
+~~~
+~~~
+edades['Hector']+=1
+edades
+~~~
+~~~
+>
+{'Hector': 28, 'Juan': 45, 'Maria': 34}
+~~~
+~~~
+edades['Juan'] + edades['Maria']
+~~~
+~~~
+>
+79
+~~~
+&nbsp;
+### Lectura secuencial con for .. in ..
+Es posible utilizar una iteraciín for para recorrer los elementos del diccionario:
+~~~
+for edad in edades:
+    print(edad)
+~~~
+~~~
+>
+Maria
+Hector
+Juan
+~~~
+El problema es que se devuelven las claves, no los valores
+Para solucionarlo deberíamos indicar la clave del diccionario para cada elemento.
+~~~
+for clave in edades:
+    print(edades[clave])
+~~~
+~~~
+>
+34
+28
+45
+~~~
+~~~
+for clave in edades:
+    print(clave,edades[clave])
+~~~
+~~~
+Maria 34
+Hector 28
+Juan 45
+~~~
+&nbsp;
+### El método .items()
+Nos facilita la lectura en clave y valor de los elementos porque devuelve ambos valores en cada iteración automáticamente:
+~~~
+for c,v in edades.items():
+    print(c,v)
+~~~
+~~~
+>
+Maria 34
+Hector 28
+Juan 45
+~~~
+&nbsp;
+### Ejemplo utilizando diccionarios y listas a la vez
+Podemos crear nuestras propias estructuras avanzadas mezclando ambas colecciones. Mientras los diccionarios se encargarían de manejar las propiedades individuales de los registros, las listas nos permitirían manejarlos todos en conjunto.
+~~~
+personajes = []
+p = {'Nombre':'Gandalf','Clase':'Mago','Raza':'Humano'}  # No sé si era un humano pero lo parecía jeje
+personajes.append(p)
+personajes
+~~~
+~~~
+>
+[{'Clase': 'Mago', 'Nombre': 'Gandalf', 'Raza': 'Humano'}]
+~~~
+~~~
+p = {'Nombre':'Legolas','Clase':'Arquero','Raza':'Elfo'}
+personajes.append(p)
+p = {'Nombre':'Gimli','Clase':'Guerrero','Raza':'Enano'}
+personajes.append(p)
+personajes
+~~~
+~~~
+>
+[{'Clase': 'Mago', 'Nombre': 'Gandalf', 'Raza': 'Humano'},
+ {'Clase': 'Arquero', 'Nombre': 'Legolas', 'Raza': 'Elfo'},
+ {'Clase': 'Guerrero', 'Nombre': 'Gimli', 'Raza': 'Enano'}]
+~~~
+~~~
+for p in personajes:
+    print(p['Nombre'], p['Clase'], p['Raza'])
+~~~
+~~~
+>
+Gandalf Mago Humano
+Legolas Arquero Elfo
+Gimli Guerrero Enano
 ~~~
