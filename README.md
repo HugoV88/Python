@@ -139,6 +139,7 @@ cadena2
 ~~~
 &nbsp;
 ## 2. Las Tuplas
+
 &nbsp;
 Son unas colecciones parecidas a las listas, con la peculiaridad de que son inmutables.
 ~~~
@@ -149,6 +150,7 @@ tupla
 >
 (100, 'Hola', [1, 2, 3, 4], -50)
 ~~~
+&nbsp;
 ### Indexación y slicing
 ~~~
 tupla = (100,"Hola",[1, 2, 3, 4],-50)
@@ -179,6 +181,7 @@ tupla[2][-1]
 >
 4
 ~~~
+&nbsp;
 ### Inmutabilidad
 ~~~
 tupla[0] = 50
@@ -192,6 +195,7 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: 'tuple' object does not support item assignment
 ~~~
+&nbsp;
 ### Función len()
 ~~~
 len(tupla)
@@ -207,6 +211,7 @@ len(tupla[2])
 >
 3
 ~~~
+&nbsp;
 ### Métodos integrados
 **index()**
 
@@ -244,6 +249,7 @@ ValueError                                Traceback (most recent call last)
 
 ValueError: tuple.index(x): x not in tuple
 ~~~
+&nbsp;
 **count()**
 
 Sirve para contar cuantas veces aparece un elemento en una tupla.
@@ -270,6 +276,7 @@ tupla.count(100)
 >
 3
 ~~~
+&nbsp;
 **append() ?**
 
 Al ser inmutables, las tuplas no disponen de métodos para modificar su contenido.
